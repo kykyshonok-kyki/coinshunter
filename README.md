@@ -1,1 +1,1 @@
-# coinshunter
+# Coins Hunter
