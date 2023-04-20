@@ -19,6 +19,9 @@ signal set_state
 func _init() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
+func earn_coin() -> void:
+	print("Coin + 1")
+
 func _physics_process(delta: float) -> void:
 	var cur_state : String = ''
 	var cur_anim : String = ''

@@ -1325,6 +1325,7 @@ radius = 0.375
 
 [node name="Player" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.47, 0)
+collision_layer = 5
 script = ExtResource("1_g7wh0")
 
 [node name="head" type="CSGSphere3D" parent="."]
