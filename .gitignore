@@ -10,3 +10,6 @@ godot-headers
 # Mono-specific ignores
 .mono/
 data_*/
+
+# Export
+export/
