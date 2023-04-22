@@ -35,6 +35,6 @@ func _physics_process(delta: float) -> void:
 			position.y -= dist
 
 
-func _on_body_entered(body: Node3D) -> void:
-	body.earn_coin()
+func _on_body_entered(_body: Node3D) -> void:
+	Global.take_coin()
 	queue_free()

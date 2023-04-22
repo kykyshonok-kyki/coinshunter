@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://djjngphw4ereq"]
+
+[ext_resource type="Script" path="res://scripts/HUD.gd" id="1_cdmci"]
+[ext_resource type="Theme" uid="uid://qljmmw3qdgba" path="res://themes/general.tres" id="2_hjo60"]
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cdmci")
+
+[node name="ScoreLable" type="Label" parent="."]
+layout_mode = 1
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 65.0
+offset_bottom = 34.0
+theme = ExtResource("2_hjo60")
+text = "Coins: 0"

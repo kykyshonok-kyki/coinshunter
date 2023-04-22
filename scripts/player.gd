@@ -17,10 +17,7 @@ var rot_y : float = 0.0
 signal set_state
 
 func _init() -> void:
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
-func earn_coin() -> void:
-	print("Coin + 1")
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _physics_process(delta: float) -> void:
 	var cur_state : String = ''
@@ -57,14 +54,12 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _input(e: InputEvent) -> void:
-	if Input.is_action_just_pressed("ui_cancel"):
-		get_tree().quit()
-
 	# Head rotation
-	if e is InputEventMouseMotion:
-		rot_x -= e.relative.y * ROT_SPEED
-		rot_y -= e.relative.x * ROT_SPEED
-		if rot_x < -1:
-			rot_x = -1
-		if rot_x > 1.6:
-			rot_x = 1.6
+	if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+		if e is InputEventMouseMotion:
+			rot_x -= e.relative.y * ROT_SPEED
+			rot_y -= e.relative.x * ROT_SPEED
+			if rot_x < -1:
+				rot_x = -1
+			if rot_x > 1.6:
+				rot_x = 1.6
